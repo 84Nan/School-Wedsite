@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('https://www.freepik.com/free-photo/church-city-shanghai-china_1175783');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+header, footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
