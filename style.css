@@ -1,30 +1,25 @@
 body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('https://www.freepik.com/free-photo/church-city-shanghai-china_1175783');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white;
+  padding: 0;
+  background: #f4f8fb;
+  color: #333;
 }
 
-header, footer {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1em;
+header {
+  background: #003366;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0 15px;
+  gap: 15px;
 }
 
 nav ul li a {
@@ -34,8 +29,38 @@ nav ul li a {
 }
 
 section {
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 20px;
-  padding: 20px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 900px;
+  background: white;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005fa3;
+}
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }

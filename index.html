@@ -1,62 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>index</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MN School - Homepage</title>
+  <title>MN School - Admissions</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Welcome to MN School</h1>
+    <h1>Admissions - MN School</h1>
     <nav>
       <ul>
-        <li><a href="https://codepen.io/Nandhini-Murugan-the-vuer/pen/GgJaayL" target="_blank">Academics</a></li>
-        <li><a href="https://codepen.io/Nandhini-Murugan-the-vuer/pen/OPVYYEL" target="_blank">Admissions</a></li>
-        <li><a href="https://codepen.io/Nandhini-Murugan-the-vuer/pen/qEdGGgM" target="_blank">Events</a></li>
-        <li><a href="https://codepen.io/yourusername/pen/announcements" target="_blank">Announcements</a></li>
-        <li><a href="https://codepen.io/Nandhini-Murugan-the-vuer/pen/ByNeeqy" target="_blank">Insights</a></li>
-        <li><a href="login.html">Login</a></li> <!-- ✅ Login link added -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a href="insights.html">Insights</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="welcome-note">
-    <h2>Welcome Note</h2>
-    <p>We're glad to have you visit our official school website! Stay informed and connected.</p>
+  <section class="process">
+    <h2>Admission Process</h2>
+    <p>
+      Admissions at MN School are open from April to June. Candidates must submit their
+      details through the form below. Selected students will be notified via email and
+      contacted by our office.
+    </p>
   </section>
 
-  <section class="announcements">
-    <h2>Latest Announcements</h2>
-    <ul id="announcement-list">
-      <!-- Dynamic content will be inserted by JavaScript -->
-    </ul>
-  </section>
+  <section class="admission-form">
+    <h2>Online Admission Form</h2>
+    <form id="admissionForm">
+      <label for="studentName">Student Name:</label><br />
+      <input type="text" id="studentName" name="studentName" required /><br /><br />
 
-  <section class="about">
-    <h2>About MN School</h2>
-    <p>MN School is committed to academic excellence and holistic development.</p>
+      <label for="admittedInto">Admitted Into:</label><br />
+      <select id="admittedInto" name="admittedInto" required>
+        <option value="">Select Class</option>
+        <option value="Class 1">Class 1</option>
+        <option value="Class 2">Class 2</option>
+        <option value="Class 3">Class 3</option>
+        <option value="Class 4">Class 4</option>
+      </select><br /><br />
+
+      <label for="previousClass">Previous Class:</label><br />
+      <input type="text" id="previousClass" name="previousClass" required /><br /><br />
+
+      <label for="marks">Previous Marks (subject-wise):</label><br />
+      <textarea id="marks" name="marks" rows="4" cols="50" placeholder="Math - 85\nScience - 90\nEnglish - 88" required></textarea><br /><br />
+
+      <button type="submit">Submit Application</button>
+    </form>
   </section>
 
   <footer>
     <p>&copy; 2025 MN School. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
+  <script>
+    document.getElementById('admissionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Admission form submitted! This will be visible to admin/principal in actual system.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>

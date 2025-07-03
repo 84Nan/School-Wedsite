@@ -1,15 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const announcements = [
-    "🎓 Mid-term exams start from 15th July.",
-    "📢 Parent-Teacher Meeting scheduled for 20th July.",
-    "🏆 Annual Sports Day on 30th July. Join us!"
-  ];
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('admissionForm');
 
-  const list = document.getElementById("announcement-list");
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-  announcements.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    list.appendChild(li);
+    const studentName = document.getElementById('studentName').value;
+    const admittedInto = document.getElementById('admittedInto').value;
+    const previousClass = document.getElementById('previousClass').value;
+    const marks = document.getElementById('marks').value;
+
+    console.log('Admission Form Submission:', {
+      studentName,
+      admittedInto,
+      previousClass,
+      marks
+    });
+
+    alert(`Admission form submitted for ${studentName}. (In a real system, this goes to admin)`);
+
+    form.reset();
   });
 });
