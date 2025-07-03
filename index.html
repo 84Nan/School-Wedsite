@@ -3,67 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MN School - Admissions</title>
+  <title>MN School - Events & Gallery</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Admissions - MN School</h1>
+    <h1>Events & Gallery - MN School</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="academics.html">Academics</a></li>
-        <li><a href="events.html">Events</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
         <li><a href="announcements.html">Announcements</a></li>
         <li><a href="insights.html">Insights</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="process">
-    <h2>Admission Process</h2>
-    <p>
-      Admissions at MN School are open from April to June. Candidates must submit their
-      details through the form below. Selected students will be notified via email and
-      contacted by our office.
-    </p>
+  <section class="upcoming-events">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li><strong>Science Exhibition</strong> - August 10, 2025</li>
+      <li><strong>Annual Day</strong> - September 25, 2025</li>
+    </ul>
   </section>
 
-  <section class="admission-form">
-    <h2>Online Admission Form</h2>
-    <form id="admissionForm">
-      <label for="studentName">Student Name:</label><br />
-      <input type="text" id="studentName" name="studentName" required /><br /><br />
+  <section class="past-events">
+    <h2>Past Events</h2>
+    <ul>
+      <li><strong>Sports Day</strong> - June 15, 2025</li>
+      <li><strong>Teacher's Day Celebration</strong> - May 5, 2025</li>
+    </ul>
+  </section>
 
-      <label for="admittedInto">Admitted Into:</label><br />
-      <select id="admittedInto" name="admittedInto" required>
-        <option value="">Select Class</option>
-        <option value="Class 1">Class 1</option>
-        <option value="Class 2">Class 2</option>
-        <option value="Class 3">Class 3</option>
-        <option value="Class 4">Class 4</option>
-      </select><br /><br />
+  <section class="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+  <!-- Replace with online hosted versions -->
+  <img src="https://source.unsplash.com/400x300/?sports,school" alt="Sports Day" />
+  <img src="https://source.unsplash.com/400x300/?books,teacher" alt="Teacher's Day" />
+  <img src="https://source.unsplash.com/400x300/?dance,stage" alt="Annual Day" />
+  <img src="https://source.unsplash.com/400x300/?school,event" alt="General Event" />
+  <img src="https://source.unsplash.com/400x300/?students,classroom" alt="Classroom Moment" />
+  <img src="https://source.unsplash.com/400x300/?school,celebration" alt="Celebration" />
+</div>
 
-      <label for="previousClass">Previous Class:</label><br />
-      <input type="text" id="previousClass" name="previousClass" required /><br /><br />
-
-      <label for="marks">Previous Marks (subject-wise):</label><br />
-      <textarea id="marks" name="marks" rows="4" cols="50" placeholder="Math - 85\nScience - 90\nEnglish - 88" required></textarea><br /><br />
-
-      <button type="submit">Submit Application</button>
-    </form>
   </section>
 
   <footer>
     <p>&copy; 2025 MN School. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById('admissionForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Admission form submitted! This will be visible to admin/principal in actual system.');
-      this.reset();
-    });
-  </script>
 </body>
 </html>
