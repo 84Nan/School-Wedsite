@@ -34,5 +34,5 @@ Develop a full-featured web portal for MN School to:
 2. Use links to navigate between modules
 3. No backend needed for static pages
 
-## 📁 Folder Structure
+
 
