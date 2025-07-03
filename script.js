@@ -1,25 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const galleryImages = document.querySelectorAll(".gallery-grid img");
+  const faculty = [
+    "Mr. A. Kumar – Principal",
+    "Ms. S. Nair – Head of Science Department",
+    "Mr. R. Mehta – Math Teacher (High School)",
+    "Ms. L. Das – English Teacher (Middle School)"
+  ];
 
-  galleryImages.forEach((img) => {
-    img.addEventListener("click", () => {
-      alert(`You clicked on: ${img.alt}`);
-      // Optional: add lightbox here
-    });
+  const list = document.createElement("ul");
+  faculty.forEach(name => {
+    const li = document.createElement("li");
+    li.textContent = name;
+    list.appendChild(li);
   });
 
-  // Example filter logic (you can hook buttons to this)
-  function showUpcomingOnly() {
-    document.querySelector(".upcoming-events").style.display = "block";
-    document.querySelector(".past-events").style.display = "none";
-  }
-
-  function showAllEvents() {
-    document.querySelector(".upcoming-events").style.display = "block";
-    document.querySelector(".past-events").style.display = "block";
-  }
-
-  // Expose globally if you want to call from buttons
-  window.showUpcomingOnly = showUpcomingOnly;
-  window.showAllEvents = showAllEvents;
+  const facultySection = document.querySelector(".faculty");
+  facultySection.appendChild(list);
 });
